@@ -7,10 +7,13 @@ def IsYearLeap(year):
     for e in year:
         if e % 4 == 0 and e % 100 != 0:
             print("El año", e, "es bisiesto")
+            return True
         elif e % 400 == 0:
             print("El año", e, "es bisiesto")
+            return True
         else:
             print("El año", e, "NO es bisiesto")
+            return False
 
 testdata = [1900, 2000, 2016, 1987]
 IsYearLeap(testdata)
