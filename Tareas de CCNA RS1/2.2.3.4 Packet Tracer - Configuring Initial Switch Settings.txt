@@ -1,0 +1,59 @@
+Parte 1:     Verificar la configuración predeterminada del switch
+Paso 2:     Examine la configuración actual del switch.
+
+1) ¿Cuántas interfaces FastEthernet tiene el switch?
+	24
+	
+2) ¿Cuántas interfaces Gigabit Ethernet tiene el switch? 
+	2
+	
+3) ¿Cuál es el rango de valores que se muestra para las líneas vty? 
+	0 4 y 5 15
+	
+4) ¿Qué comando muestra el contenido actual de la memoria de acceso aleatorio no volátil (NVRAM)? 
+	show startup-config
+	
+5) ¿Por qué el switch responde con startup-config is not present? 
+	Porque no existe el archivo startup-config, que es la configuración que carga por defecto al reiniciar el switch
+	
+	c1$c0
+Parte 2:    Establecer una configuración básica del switch
+Paso 2:     Proporcionar un acceso seguro a la línea de consola.
+
+¿Por qué se requiere el comando login?
+Para que la contraseña que hemos puesto, te la pida al querer acceder mediante consola, es decir para que sea necesario logearte si quieres usar la consola
+
+Paso 7:     Verifique si la contraseña de enable secret se agregó al archivo de configuración.
+
+b.   ¿Qué se muestra como contraseña de enable secret?
+	5 $1$mERr$ILwq/b7kc.7X/ejA4Aosn0
+c.    ¿Por qué la contraseña de enable secret se ve diferente de lo que se configuró?
+	Porque a diferencia de la contraseña "enable password" que está en texto plano, esta, está encriptada para ofrecer una mayor seguridad
+
+	
+Paso 8:     Encriptar las contraseñas de consola y de enable.
+
+Si configura más contraseñas en el switch, ¿se mostrarán como texto no cifrado o en forma cifrada en el archivo de configuración? Explique.
+	En forma cifrada, ya que el comando "service password-encryption" que hemos aplicado antes, cifra todas las contraseñas que haya almacenadas en el archivo de configuración
+
+	
+Parte 3:     Configurar un aviso de MOTD
+1)     ¿Cuándo se muestra este aviso?
+	Se muestra cuando una persona intenta iniciar sesión en la consola
+2)     ¿Por qué todos los switches deben tener un aviso de MOTD?
+	Porque los avisos pueden ser una parte importante en los procesos legales en el caso de una demanda por el ingreso no autorizado a un dispositivo. Algunos sistemas legales no permiten la acusación, y ni siquiera el monitoreo de los usuarios, a menos que haya una notificación visible
+	
+	
+Parte 4:     Guardar los archivos de configuración en la NVRAM
+Paso 2:     Guardar el archivo de configuración.
+¿Cuál es la versión abreviada más corta del comando copy running-config startup-config?
+	copy run start
+	
+
+Paso 3:     Examine el archivo de configuración de inicio.
+
+¿Qué comando muestra el contenido de la NVRAM?
+show startup-config
+
+¿Todos los cambios realizados están grabados en el archivo?
+sí
