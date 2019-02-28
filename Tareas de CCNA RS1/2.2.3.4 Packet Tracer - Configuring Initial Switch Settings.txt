@@ -16,7 +16,7 @@ Paso 2:     Examine la configuración actual del switch.
 5) ¿Por qué el switch responde con startup-config is not present? 
 	Porque no existe el archivo startup-config, que es la configuración que carga por defecto al reiniciar el switch
 	
-	c1$c0
+	
 Parte 2:    Establecer una configuración básica del switch
 Paso 2:     Proporcionar un acceso seguro a la línea de consola.
 
