@@ -1,0 +1,45 @@
+Parte 1:    Realizar una configuración básica en S1 y S2
+
+Paso 3:   Verificar la configuración de contraseñas para el S1.
+
+¿Cómo puede verificar que ambas contraseñas se hayan configurado correctamente?
+#####	saliendome de la consola por completo poniendo exit todas las veces que sean necesarias, y luego al intentar entrar de nuevo por consola
+#####	me debe de pedir la contraseña (cisco), y al darme acceso, al poner "enable", me pexirá la clave del modo privilegiado (clase)
+
+Paso 5:   Guardar el archivo de configuración en la NVRAM.
+
+¿Qué comando emite para realizar este paso?
+#####	copy running-config startup-config
+	
+	
+	
+Parte 2:    Configurar las PC
+Paso 2:   Probar la conectividad a los switches.
+
+a.    Haga clic en PC1. Cierre la ventana Configuración de IP si todavía está abierta. En la ficha Escritorio, haga clic en Símbolo del sistema.
+
+b.   Escriba el comando ping y la dirección IP para el S1 y presione Intro.
+
+Packet Tracer PC Línea de comandos 1.0
+PC> ping 192.168.1.253
+¿Tuvo éxito? Explique.
+#####	No tuvo exito porque ni el switch ni ningun dispositivo de la red local a la que pertenece el PC1 tiene asignada la ip 192.168.1.253, o en otras palabras, no existe aun ningun dispositivo con dicha ip.
+	
+
+Parte 3:    Configurar la interfaz de administración de switches
+Configure el S1 y el S2 con una dirección IP.
+
+Paso 1.   Configurar S1 con una dirección IP.
+
+Los switches pueden usarse como dispositivos plug-and-play. 
+Esto significa que no necesitan configurarse para que funcionen. Los switches reenvían información desde un puerto hacia otro sobre la base de direcciones de control de acceso al medio (MAC).
+Si este es el caso, ¿por qué lo configuraríamos con una dirección IP?
+#####	Ahora mismo para que podamos hacerle ping, pero sobre todo para poder configurarlo por red remotamente a traves de una ip, por ejemplo usando putty (ssh), es decir, no solamente mediante el cable de consola (aunque si que es verdad que hay routers que pueden configurarse de forma remota con un modem sin necesida de ningun servicio de red, pero normalmente se hace por cable consola(de forma física) o por red(de forma remota))
+
+¿Por qué debe introducir el comando no shutdown?
+##### Para habilitar la intertaz virtual, si no es como si estuviera "apagado/desconectado" y por lo tanto seguiría sin IP el switch
+
+Paso 4:   Guarde la configuración para el S1 y el S2 en la NVRAM.
+
+¿Qué comando se utiliza para guardar en la NVRAM el archivo de configuración que se encuentra en la RAM?
+copy running-config startup-config
