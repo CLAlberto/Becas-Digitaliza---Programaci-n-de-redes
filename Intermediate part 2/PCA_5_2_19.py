@@ -33,3 +33,4 @@ for i in range(5):
 print(stack.getSum())
 for i in range(5):
 	print(stack.pop())
+	
