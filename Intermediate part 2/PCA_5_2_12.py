@@ -15,3 +15,4 @@ stack2 = Stack()
 stack1.push(3)
 stack2.push(stack1.pop())
 print(stack2.pop())
+
